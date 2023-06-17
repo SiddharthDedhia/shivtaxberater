@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/shivtaxberater/static/css/main.9616d1a5.css",
-    "main.js": "/shivtaxberater/static/js/main.ee174908.js",
+    "main.css": "/shivtaxberater/static/css/main.2fee88eb.css",
+    "main.js": "/shivtaxberater/static/js/main.a8b81d73.js",
     "static/js/787.78bc5f89.chunk.js": "/shivtaxberater/static/js/787.78bc5f89.chunk.js",
+    "static/media/berlin_1.jpg": "/shivtaxberater/static/media/berlin_1.d70fa6eac55c7af7f986.jpg",
     "index.html": "/shivtaxberater/index.html",
-    "main.9616d1a5.css.map": "/shivtaxberater/static/css/main.9616d1a5.css.map",
-    "main.ee174908.js.map": "/shivtaxberater/static/js/main.ee174908.js.map",
+    "main.2fee88eb.css.map": "/shivtaxberater/static/css/main.2fee88eb.css.map",
+    "main.a8b81d73.js.map": "/shivtaxberater/static/js/main.a8b81d73.js.map",
     "787.78bc5f89.chunk.js.map": "/shivtaxberater/static/js/787.78bc5f89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9616d1a5.css",
-    "static/js/main.ee174908.js"
+    "static/css/main.2fee88eb.css",
+    "static/js/main.a8b81d73.js"
   ]
 }
