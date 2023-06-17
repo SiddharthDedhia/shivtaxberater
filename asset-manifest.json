@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/shivtaxberater/static/css/main.9616d1a5.css",
-    "main.js": "/shivtaxberater/static/js/main.01ba494f.js",
+    "main.js": "/shivtaxberater/static/js/main.ee174908.js",
     "static/js/787.78bc5f89.chunk.js": "/shivtaxberater/static/js/787.78bc5f89.chunk.js",
     "index.html": "/shivtaxberater/index.html",
     "main.9616d1a5.css.map": "/shivtaxberater/static/css/main.9616d1a5.css.map",
-    "main.01ba494f.js.map": "/shivtaxberater/static/js/main.01ba494f.js.map",
+    "main.ee174908.js.map": "/shivtaxberater/static/js/main.ee174908.js.map",
     "787.78bc5f89.chunk.js.map": "/shivtaxberater/static/js/787.78bc5f89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9616d1a5.css",
-    "static/js/main.01ba494f.js"
+    "static/js/main.ee174908.js"
   ]
 }
