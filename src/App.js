@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="title">{language === 'en' ? 'Welcome to TaxConsult' : 'Willkommen bei TaxConsult'}</h1>
+        <h1 className="title">{language === 'en' ? 'Welcome to Shiv Tax Beratung' : 'Willkommen bei Shiv Tax Beratung'}</h1>
         <p className="subtitle">
           {language === 'en' ? 'Your Trusted Tax Consulting Partner' : 'Ihr vertrauenswürdiger Steuerberatungspartner'}
         </p>
