@@ -1,44 +1,117 @@
 /* App.css */
-.App {
-  text-align: center;
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 800px;
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item {
+  margin-right: 20px;
+}
+
+.navbar-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+/* Open menu styles */
+.open .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Header styles */
 .App-header {
-  background-color: #f0f0f0;
-  padding: 40px;
-  margin-bottom: 40px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-image: url('berlin_1.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 0;
+  color: #fff;
 }
 
 .title {
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .subtitle {
-  font-size: 18px;
-  color: #777;
-  margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }
 
 .contact-button {
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #42b983;
-  color: #fff;
+  background-color: #fff;
+  color: #222;
   border: none;
   border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: #30a372;
+  background-color: #ddd;
 }
 
 .language-switcher {
@@ -46,80 +119,107 @@
 }
 
 .language-button {
-  font-size: 16px;
-  color: #777;
-  background-color: transparent;
+  background: none;
   border: none;
+  color: #fff;
+  font-size: 1rem;
   cursor: pointer;
   margin-right: 10px;
-  padding: 6px 12px;
-  transition: color 0.3s ease;
+  padding: 0;
+  opacity: 0.5;
+}
+
+.language-button:hover {
+  opacity: 1;
 }
 
 .language-button.active {
-  color: #42b983;
-  font-weight: bold;
+  opacity: 1;
 }
 
+/* Services section styles */
 .Services {
-  margin-bottom: 40px;
+  padding: 40px 0;
+  background-color: #f7f7f7;
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #333;
+  text-align: center;
 }
 
 .ServiceCard {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .service-icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 20px;
 }
 
 .service-title {
-  font-size: 18px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
 }
 
 .service-description {
-  font-size: 14px;
-  color: #777;
+  color: #555;
 }
 
+/* Why Choose Us section styles */
 .WhyChooseUs {
+  padding: 40px 0;
+}
+
+.ReasonCard {
+  align-items: center;
   margin-bottom: 40px;
 }
 
-.reasons-list {
-  text-align: left;
-  list-style-type: disc;
-  margin: 0 auto;
-  max-width: 400px;
+.reason-icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
 
-.reasons-list .reason {
+.reason-title {
+  font-size: 1.5rem;
   margin-bottom: 10px;
+  text-align: center;
 }
 
+.reason-description {
+  color: #555;
+}
+
+/* Contact section styles */
+.Contact {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.contact-description {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Footer styles */
 .Footer {
-  background-color: #f0f0f0;
+  background-color: #222;
+  color: #fff;
   padding: 20px;
+  text-align: center;
 }
 
 .Footer p {
-  font-size: 18px;
   margin-bottom: 10px;
 }
-
-/* Additional styling can be added as per your requirements */

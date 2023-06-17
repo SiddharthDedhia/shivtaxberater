@@ -3,15 +3,40 @@ import './App.css';
 
 function App() {
   const [language, setLanguage] = useState('en');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLanguageChange = (selectedLanguage) => {
     setLanguage(selectedLanguage);
   };
 
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="App">
+      <nav className="navbar">
+        <div className="navbar-logo">TaxConsult</div>
+        <button className={`menu-toggle ${menuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
+          <li className="navbar-item">
+            <a href="#services">{language === 'en' ? 'Services' : 'Dienstleistungen'}</a>
+          </li>
+          <li className="navbar-item">
+            <a href="#why-choose-us">{language === 'en' ? 'Why Choose Us' : 'Warum uns wählen'}</a>
+          </li>
+          <li className="navbar-item">
+            <a href="#contact">{language === 'en' ? 'Contact' : 'Kontakt'}</a>
+          </li>
+        </ul>
+      </nav>
       <header className="App-header">
-        <h1 className="title">{language === 'en' ? 'Welcome to Shiv Tax Beratung' : 'Willkommen bei Shiv Tax Beratung'}</h1>
+        <div className="header-background"></div>
+        <h1 className="title">{language === 'en' ? 'Welcome to TaxConsult' : 'Willkommen bei TaxConsult'}</h1>
         <p className="subtitle">
           {language === 'en' ? 'Your Trusted Tax Consulting Partner' : 'Ihr vertrauenswürdiger Steuerberatungspartner'}
         </p>
@@ -33,63 +58,75 @@ function App() {
           </button>
         </div>
       </header>
-      <section className="Services">
+      <section id="services" className="Services">
         <h2 className="section-title">{language === 'en' ? 'Our Services' : 'Unsere Dienstleistungen'}</h2>
         <div className="ServiceCard">
-          <img src="tax-preparation.png" alt="Tax Preparation" className="service-icon" />
-          <h3 className="service-title">{language === 'en' ? 'Tax Preparation' : 'Steuererklärung'}</h3>
+        <h3 className="service-title">
+            {language === 'en' ? 'Tax Preparation' : 'Steuererklärung'}
+          </h3>
           <p className="service-description">
             {language === 'en'
-              ? 'We handle all aspects of tax preparation, ensuring accurate and timely filing of your taxes. Leave the paperwork to us!'
-              : 'Wir kümmern uns um alle Aspekte der Steuererklärung und stellen sicher, dass Ihre Steuererklärungen korrekt und rechtzeitig eingereicht werden. Überlassen Sie uns die Papierarbeit!'}
+              ? 'We provide expert tax preparation services to ensure accurate and timely filing of your tax returns.'
+              : 'Wir bieten fachkundige Steuererklärungsdienste an, um eine genaue und rechtzeitige Einreichung Ihrer Steuererklärungen sicherzustellen.'}
           </p>
         </div>
         <div className="ServiceCard">
-          <img src="tax-planning.png" alt="Tax Planning" className="service-icon" />
-          <h3 className="service-title">{language === 'en' ? 'Tax Planning' : 'Steuerplanung'}</h3>
+         <h3 className="service-title">
+            {language === 'en' ? 'Tax Planning' : 'Steuerplanung'}
+          </h3>
           <p className="service-description">
             {language === 'en'
-              ? 'Our experts provide personalized tax planning strategies to minimize your tax liability and maximize your savings.'
-              : 'Unsere Experten bieten maßgeschneiderte Steuerplanungsstrategien, um Ihre Steuerlast zu minimieren und Ihre Einsparungen zu maximieren.'}
-          </p>
-        </div>
-        <div className="ServiceCard">
-          <img src="irs-representation.png" alt="IRS Representation" className="service-icon" />
-          <h3 className="service-title">{language === 'en' ? 'IRS Representation' : 'Vertretung vor der IRS'}</h3>
-          <p className="service-description">
-            {language === 'en'
-              ? "If you're facing an IRS audit or need assistance with tax disputes, our experienced professionals are here to help."
-              : 'Wenn Sie sich einer IRS-Prüfung stellen oder Hilfe bei Steuerstreitigkeiten benötigen, stehen Ihnen unsere erfahrenen Fachleute zur Seite.'}
+              ? 'Our tax planning services help you minimize your tax liability and optimize your financial strategies.'
+              : 'Unsere Steuerplanungsdienste helfen Ihnen, Ihre Steuerlast zu minimieren und Ihre finanziellen Strategien zu optimieren.'}
           </p>
         </div>
       </section>
-      <section className="WhyChooseUs">
-        <h2 className="section-title">{language === 'en' ? 'Why Choose Us?' : 'Warum uns wählen?'}</h2>
-        <ul className="reasons-list">
-          <li className="reason">{language === 'en' ? 'Experienced and knowledgeable tax consultants' : 'Erfahrene und kompetente Steuerberater'}</li>
-          <li className="reason">{language === 'en' ? 'Personalized solutions tailored to your specific needs' : 'Maßgeschneiderte Lösungen, die auf Ihre spezifischen Bedürfnisse zugeschnitten sind'}</li>
-          <li className="reason">{language === 'en' ? 'Timely and accurate tax filings' : 'Pünktliche und korrekte Steuererklärungen'}</li>
-          <li className="reason">{language === 'en' ? 'Transparent pricing with no hidden fees' : 'Transparente Preise ohne versteckte Gebühren'}</li>
-          <li className="reason">{language === 'en' ? 'Responsive and friendly customer support' : 'Schneller und freundlicher Kundenservice'}</li>
-        </ul>
+      <section id="why-choose-us" className="WhyChooseUs">
+        <h2 className="section-title">
+          {language === 'en' ? 'Why Choose Us' : 'Warum uns wählen'}
+        </h2>
+        <div className="ReasonCard">
+          <h3 className="reason-title">
+            {language === 'en' ? 'Expertise' : 'Fachkenntnisse'}
+          </h3>
+          <p className="reason-description">
+            {language === 'en'
+              ? 'Our team of highly skilled tax consultants has extensive knowledge and experience in tax regulations and laws.'
+              : 'Unser Team von hochqualifizierten Steuerberatern verfügt über umfangreiches Wissen und Erfahrung in Steuervorschriften und -gesetzen.'}
+          </p>
+        </div>
+        <div className="ReasonCard">
+          <h3 className="reason-title">
+            {language === 'en' ? 'Personalized Service' : 'Persönlicher Service'}
+          </h3>
+          <p className="reason-description">
+            {language === 'en'
+              ? 'We understand that every client is unique, so we provide tailored solutions and personalized service to meet your specific needs.'
+              : 'Wir verstehen, dass jeder Kunde einzigartig ist. Daher bieten wir maßgeschneiderte Lösungen und persönlichen Service, der Ihren spezifischen Anforderungen entspricht.'}
+          </p>
+        </div>
+      </section>
+      <section id="contact" className="Contact">
+        <h2 className="section-title">{language === 'en' ? 'Contact Us' : 'Kontaktieren Sie uns'}</h2>
+        <p className="contact-description">
+          {language === 'en'
+            ? 'Ready to get started? Contact us today for a consultation.'
+            : 'Bereit, loszulegen? Kontaktieren Sie uns noch heute für eine Beratung.'}
+        </p>
+        <div className="contact-info">
+          <p>
+            <strong>{language === 'en' ? 'Phone:' : 'Telefon:'}</strong> +1 123-456-7890
+          </p>
+          <p>
+            <strong>Email:</strong> info@taxconsult.com
+          </p>
+          <p>
+            <strong>{language === 'en' ? 'Address:' : 'Adresse:'}</strong> 123 Main St, City, Country
+          </p>
+        </div>
       </section>
       <footer className="Footer">
-        <p className="footer-text">
-          {language === 'en'
-            ? 'Contact us now to schedule a consultation and take control of your taxes.'
-            : 'Kontaktieren Sie uns jetzt, um einen Beratungstermin zu vereinbaren und die Kontrolle über Ihre Steuern zu übernehmen.'}
-        </p>
-        <button className="contact-button">
-        <a
-        className="App-link"
-        href="mailto:shiv.amgoth88@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-       {language === 'en' ? 'Contact Us' : 'Kontaktieren Sie uns'}
-      </a>
-          
-        </button>
+        <p>&copy; 2023 TaxConsult. All rights reserved.</p>
       </footer>
     </div>
   );
